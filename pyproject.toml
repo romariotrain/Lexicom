@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "lexicom"
+version = "0.1.0"
+description = ""
+authors = ["Roman Morozevich <romamorozevich@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.112.1"
+redis = "^5.0.8"
+pydantic = "^2.8.2"
+uvicorn = "^0.30.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+lint.select = ["E", "F", "W", "C", "N", "B", "Q", "T"]
+lint.ignore = []
+
+line-length = 79
+
+
+[tool.ruff.lint.isort]
+known-local-folder = ["app"]
+known-third-party = ["fastapi", "uvicorn", "redis", "pydantic"]
+order-by-type = true
+
