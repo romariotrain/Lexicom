@@ -42,7 +42,6 @@ async def create_data(data: WriteDataModel):
     )
 
 
-
 @app.put("/write_data", response_model=WriteDataResponseModel)
 async def update_data(data: WriteDataModel):
     """
@@ -61,7 +60,6 @@ async def update_data(data: WriteDataModel):
         status="success",
         message="Data has been updated successfully."
     )
-
 
 
 @app.get("/check_data", response_model=AddressResponseModel)
